@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+    <script>
+        function escreve() {
+            var var1 = document.getElementById("val1");
+            var var2 = document.getElementById("val2");
+            document.getElementById("cubo").innerText = var1.value * var1.value * var1.value;
+        }
+        function farenheit() {
+            var var3 = document.getElementById("val3");
+            document.getElementById("farenheit").innerText = (var3.value- 32) * 0.5556;
+        }
+        function triangulo() {
+            var var4 = document.getElementById("val4");
+            var var5 = document.getElementById("val5");
+            document.getElementById("triangulo").innerText = var4.value * var5.value / 2;
+        }
+        function circuloa() {
+            var var6 = document.getElementById("val6");
+            document.getElementById("circulo").innerText = 3,1415 *  var6.value * var6.value;
+        }
+        function circulob() {
+            var var7 = document.getElementById("val7");
+            document.getElementById("circulob").innerText = 2 * 3,1415 * var7.value;
+        }
+        function desconto() {
+            var var8 = document.getElementById("val8");
+            document.getElementById("desconto").innerText = 0.05 * var8.value;
+        }
+        function idade() {
+            var var9 = document.getElementById("val9");
+            document.getElementById("idade").innerText = 2023 - var9.value;
+
+            if (val9.value > 2005)
+               window.alert("Você é menor de idade") ;  
+
+            else 
+                window.alert("Você é maior de idade") ; 
+        }
+        function comprarCombustível() {
+            var var10 = document.getElementById("val10");
+            document.getElementById("ccombustivel").innerText = var10.value / 5;
+        }
+        function combustivelandados() {
+            var var11 = document.getElementById("val11");
+            document.getElementById("candados").innerText = var11.value / 20 ;
+        }
+    </script>
+
+<body>
+
+    <style>
+
+body{
+    background-color: gainsboro;
+}
+
+button{
+  background: #333;
+  color: #ccc;
+  width: 100px;
+  height: 23px;
+  border: 0;
+  font-size: 10px;
+  border-radius: 4px;
+  font-family: 'Raleway', sans-serif;
+  transition: .6s;
+  overflow: hidden;
+  &:focus{
+    outline: 0;
+  }
+  
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,0.2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100px) skewX(-15deg);
+  }
+  &:hover{
+    background: #7b8033;
+    cursor: pointer;
+    &:before{
+      transform: translateX(300px)  skewX(-15deg);  
+      opacity: 0.6;
+      transition: .7s;
+    }
+    &:after{
+      transform: translateX(300px) skewX(-15deg);  
+      opacity: 1;
+      transition: .7s;
+    }
+  }
+}
+
+    </style>
+
+    Calcular número elevado ao ³ <br>
+    <input id="val1" value="Número">
+    <button onclick="escreve()">Número³</button>
+    <p id="cubo">XXXX</p>
+
+    Converter temperatura em F° para C° <br>
+    <input id="val3" value="Graus F°">
+    <button onclick="farenheit()">Celsius</button>
+    <p id="farenheit">XXXX</p>
+
+    Calcular área do triângulo <br>
+    <input id="val4" value="Base">
+    <input id="val5" value="Altura">
+    <button onclick="triangulo()">Triângulo</button>
+    <p id="triangulo">XXXX</p>
+
+    Calcular área do circulo <br>
+    <input id="val6" value="Raio">
+    <button onclick="circuloa()">Circulo Área</button>
+    <p id="circulo">XXXX</p>
+
+    Calcular perímetro do circulo<br>
+    <input id="val7" value="Raio">
+    <button onclick="circulob()">Circulo Perímetro</button>
+    <p id="circulob">XXXX</p>
+
+    Calcular desconto de 5% <br>
+    <input id="val8" value="Valor">
+    <button onclick="desconto()">Desconto</button>
+    <p id="desconto">XXXX</p>
+
+    Calcular sua idade <br>
+    <input id="val9" value="Ano em que você nasceu">
+    <button onclick="idade()">Idade</button>
+    <p id="idade">XXXX</p>
+
+    Litros de combustível que posso comprar <br>
+    <input id="val10" value="Seu Dinheiro">
+    <button onclick="comprarCombustível()"> Combustível Comprado</button>
+    <p id="ccombustivel">XXXX</p>
+
+    Quilômetros por litro <br>
+    <input id="val11" value="Litros de Combustível">
+    <button onclick="combustivelandados()">Quilômetros Andados</button>
+    <p id="candados">XXXX</p>
+
+
+
+</body>
+</html>
